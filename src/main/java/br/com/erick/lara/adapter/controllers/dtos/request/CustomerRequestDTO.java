@@ -19,7 +19,7 @@ public class CustomerRequestDTO {
 
     public CustomerEntity convertDtoToEntity(){
         return new CustomerEntity(
-                0L,
+                null,
                 this.name,
                 this.phone,
                 this.email,

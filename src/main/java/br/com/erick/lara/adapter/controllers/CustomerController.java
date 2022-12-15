@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path(value = "/api/customers")
+@Path(value = "/customers")
 public class CustomerController {
 
     @Inject

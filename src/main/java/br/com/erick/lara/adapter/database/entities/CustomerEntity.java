@@ -1,5 +1,6 @@
 package br.com.erick.lara.adapter.database.entities;
 
+import br.com.erick.lara.adapter.controllers.dtos.request.CustomerRequestDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,4 +22,12 @@ public class CustomerEntity {
     private String email;
     private String address;
     private Long age;
+
+    public void populate(CustomerRequestDTO requestDTO){
+        this.name = requestDTO.getName();
+        this.phone = requestDTO.getPhone();
+        this.address = requestDTO.getAddress();
+        this.email = requestDTO.getEmail();
+        this.age = requestDTO.getAge();
+    }
 }

@@ -29,14 +29,15 @@ public class DefaultCustomerService implements CustomerService {
 
     @Override
     public void createNewCustomer(CustomerRequestDTO customerRequestDTO) {
-        customerRepository.persist(customerRequestDTO.convertDtoToEntity());
+        CustomerEntity entity = customerRequestDTO.convertDtoToEntity();
+        customerRepository.persist(entity);
     }
 
     @Override
     public void updateCustomer(Long id, CustomerRequestDTO customerRequestDTO) {
-        Customer customer = Customer.convertEntityToDomain(customerRepository.findById(id));
+        CustomerEntity customer = customerRepository.findById(id);
         customer.populate(customerRequestDTO);
-        customerRepository.persist(customer.convertDomainToEntity());
+        customerRepository.persist(customer);
     }
 
     @Override

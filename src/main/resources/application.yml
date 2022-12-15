@@ -1,0 +1,19 @@
+quarkus:
+  hibernate-orm:
+    database:
+      generation: update
+  datasource:
+    db-kind: postgresql
+    password: password
+    username: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/customerdb
+      driver: org.postgresql.Driver
+
+  log:
+    category:
+      "io.quarkus.category":
+        level: INFO
+  http:
+    root-path: /api
+    port: 80
