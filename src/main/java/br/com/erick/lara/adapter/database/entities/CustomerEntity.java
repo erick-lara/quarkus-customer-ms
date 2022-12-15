@@ -1,9 +1,17 @@
 package br.com.erick.lara.adapter.database.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class CustomerEntity {
 
     @Id
