@@ -17,3 +17,5 @@ quarkus:
   http:
     root-path: /api
     port: 80
+  swagger-ui:
+    path: /swagger

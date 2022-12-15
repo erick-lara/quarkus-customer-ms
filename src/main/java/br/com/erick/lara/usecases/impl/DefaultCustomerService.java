@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class DefaultCustomerService implements CustomerService {
 
     @Inject
-    private CustomerRepository customerRepository;
+    CustomerRepository customerRepository;
 
     @Override
     public List<Customer> findAllCustomers(){

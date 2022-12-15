@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomerController {
 
     @Inject
-    private CustomerService customerService;
+    CustomerService customerService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
